@@ -649,7 +649,7 @@ class Euca2ool:
                 path=self.service_path,
                 )
         else:
-            return boto.s3.Connection(
+            return boto.s3.connection.S3Connection(
                 aws_access_key_id=self.ec2_user_access_key,
                 aws_secret_access_key=self.ec2_user_secret_key,
                 is_secure=self.is_secure,
